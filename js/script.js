@@ -32,6 +32,8 @@ fetch('file.json')
     console.log('Error:', err);
   });
 
+  
   function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("open");
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
   }
