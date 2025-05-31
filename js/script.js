@@ -31,3 +31,7 @@ fetch('file.json')
   .catch((err) => {
     console.log('Error:', err);
   });
+
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("open");
+  }

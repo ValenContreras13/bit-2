@@ -14,31 +14,33 @@
   </head>
   <body>
 <body>
-  <nav class="nave d-flex align-items-center justify-content-between flex-wrap px-6 py-5">
-  
+<nav class="nave container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3">
   <!-- Logo -->
-  <div class="ico">
-     <a>
-<img src="./assets/bit.PNG" alt="feat" style="width: 200px;height: 90px;">
-     </a>
+  <div class="ico mb-3 mb-md-0">
+    <a href="index.html">
+      <img src="./assets/bit.PNG" alt="feat" style="width: 200px; height: 90px;">
+    </a>
   </div>
 
   <!-- Enlaces -->
-  <div class="nav-links d-flex gap-4 align-items-center">
-     <div class="nav-item">
-    <a href="estudiantes.html">ESTUDIANTES</a>
-  </div>
-  <div class="nav-item">
-    <a href="contacto.html">CONTACTO</a>
-  </div>
+  <div class="nav-links d-flex flex-column flex-md-row gap-3 align-items-center mb-3 mb-md-0">
+    <div class="nav-item">
+      <a class="text-dark text-decoration-none" href="estudiantes.html">ESTUDIANTES</a>
+    </div>
+    <div class="nav-item">
+      <a class="text-dark text-decoration-none" href="contacto.html">CONTACTO</a>
+    </div>
   </div>
 
-  
-  <form class="d-flex mt-2 mt-md-0" role="search">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style=" font-family: 'Poetsen One', sans-serif;">
-    <button class="btn btn-outline-success" style="background-color:rgb(192, 194, 197);color: black; border-color: aliceblue; font-family: 'Poetsen One', sans-serif;"; type="submit">BUSCAR</button>
+  <!-- Buscador -->
+  <form class="d-flex flex-column flex-sm-row gap-2 mt-2 mt-md-0" role="search">
+    <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="font-family: 'Poetsen One', sans-serif;">
+    <button onclick="alert('Estamos trabajando en ello')"  class="btn btn-outline-success" type="submit" style="background-color:rgb(192, 194, 197); color: black; border-color: aliceblue; font-family: 'Poetsen One', sans-serif;">
+      BUSCAR
+    </button>
   </form>
 </nav>
+
 <aside class="curso">
   <hr class="hr">
   <h3>CURSO DESARROLLO WEB FULL STACK</h3>
