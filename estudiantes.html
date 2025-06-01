@@ -140,27 +140,30 @@
 </section>
 </section> -->
   </main>
-   <aside class="">
-<button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-
-<!-- Sidebar con filtros -->
-<div class="sidebar" id="sidebar">
-  <h3>Filtros</h3>
-  <div class="filter-option">
-    <input type="checkbox" id="op1">
-    <label for="op1">Opción 1</label>
-    
-  </div>
-  <div class="filter-option">
-    <input type="checkbox" id="op2">
-    <label for="op2">Opción 2</label>
-  </div>
-  <div class="filter-option">
-    <input type="checkbox" id="op3">
-    <label for="op3">Opción 3</label>
-  </div>
-</div>
+     <!-- Sidebar -->
+  <aside>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+      <h3>Filtros</h3>
+      <div class="filter-option">
+        <input type="checkbox" id="op1">
+        <label for="op1">MOSTRAR TODOS LOS ESTUDIANTES</label>
+      </div>
+      <div class="filter-option">
+        <input type="checkbox" id="op2">
+        <label for="op2">MOSTRAR DESCRIPCIÓN DEL PERFIL</label>
+      </div>
+    </div>
   </aside>
+
+  <!-- Contenedor para mostrar tarjetas -->
+  <div id="root"></div>
+  <div id="git"></div>
+
+  <!-- Scripts (github.js primero, luego scripts.js) -->
+  <script src="./js/github.js"></script>
+  <script src="./js/script.js"></script>
+
 
   <br>
     <footer>
