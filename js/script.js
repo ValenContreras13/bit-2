@@ -86,7 +86,6 @@ function fetchAndDisplayStudents() {
         </div>
       `;
 
-      clearAllSections();
     })
     .catch(err => {
       console.error('Error al cargar JSON:', err);
@@ -107,6 +106,7 @@ checkboxTodos.addEventListener('change', () => {
     clearAllSections();
   }
 });
+
 
 checkboxGitHubBio.addEventListener('change', () => {
   if (checkboxGitHubBio.checked) {
