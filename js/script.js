@@ -10,7 +10,7 @@ const $notas = document.getElementById('notas');
 
 const fallbackImage = './assets/desconocido.PNG';
 
-// === Checkboxes ===
+
 const checkboxTodos = document.getElementById('op1');
 const checkboxGitHubBio = document.getElementById('op2');
 const checkbox100Hours = document.getElementById('op3');
@@ -18,7 +18,6 @@ const checkbox300Hours = document.getElementById('op4');
 const checkbox400Hours = document.getElementById('op5');
 const checkboxNotas = document.getElementById('op6');
 
-// Función para limpiar todas las secciones
 function clearAllSections() {
   $root.innerHTML = '';
   $git.innerHTML = '';
@@ -28,7 +27,7 @@ function clearAllSections() {
   $notas.innerHTML = '';
 }
 
-// Desactiva todos los demás checkboxes excepto el activo
+
 function deactivateOthers(activeCheckbox) {
   const checkboxes = [
     checkboxTodos,
@@ -44,7 +43,7 @@ function deactivateOthers(activeCheckbox) {
   });
 }
 
-// Mostrar todos los estudiantes (sin bio GitHub)
+
 function fetchAndDisplayStudents() {
   fetch('file.json')
     .then(res => res.json())
@@ -94,13 +93,11 @@ function fetchAndDisplayStudents() {
     });
 }
 
-// Alternar sidebar
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
   sidebar.classList.toggle('active');
 }
 
-// === EVENTOS DE FILTROS ===
 
 checkboxTodos.addEventListener('change', () => {
   if (checkboxTodos.checked) {

@@ -1,6 +1,7 @@
-// github.js
+'use strict';
+
 function fetchGitHubProfiles(data, $root, fallbackImage) {
-  $root.innerHTML = ''; // Limpiar antes de mostrar nuevos resultados
+  $root.innerHTML = ''; 
 
   const cards = data.map(async (item) => {
     const student = item.student || 'Estudiante sin nombre';
