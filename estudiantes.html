@@ -45,7 +45,7 @@
 <br>
   <section class="estudiantes">
   <hr style="border: none; border-top: 8px dotted black; width: 100%;">
-  <h3> CONOCE INFORMACIÓN DE NUESTROS ESTUDIANTES !! ℹ️</h3>
+  <h3> CONSTRUYE CONOCIMIENTO CON NOSOTROS !! ℹ️</h3>
   <hr style="border: none; border-top: 8px dotted black; width: 100%;">
   </section>
 
@@ -140,28 +140,58 @@
 </section>
 </section> -->
   </main>
+  <section class="estudiantes1">
+  <hr style="border: none; border-top: 8px dotted black; width: 100%;">
+  <h3> CONOCE INFORMACIÓN DE NUESTROS ESTUDIANTES 🧑‍🎓</h3>
+  <hr style="border: none; border-top: 8px dotted black; width: 100%;">
+  </section>
      <!-- Sidebar -->
   <aside>
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <button class="toggle-btn" onclick="toggleSidebar()" style="font-family: 'Poetsen One', sans-serif;">INGRESA ☰</button>
     <div class="sidebar" id="sidebar">
-      <h3>Filtros</h3>
-      <div class="filter-option">
+      <h3  style="font-family: 'Poetsen One', sans-serif; color: rgb(23, 23, 104);">FILTROS</h3>
+      <div class="filter-option" style="font-family: 'Poetsen One', sans-serif;">
         <input type="checkbox" id="op1">
         <label for="op1">MOSTRAR TODOS LOS ESTUDIANTES</label>
       </div>
-      <div class="filter-option">
+      <div class="filter-option"  style="font-family: 'Poetsen One', sans-serif;">
         <input type="checkbox" id="op2">
         <label for="op2">MOSTRAR DESCRIPCIÓN DEL PERFIL</label>
+      </div>
+      <div class="filter-option"  style="font-family: 'Poetsen One', sans-serif;">
+      <input type="checkbox" id="op3">
+      <label for="op3">MOSTRAR SOLO ESTUDIANTES CON 100 HORAS</label>
+      </div>
+       <div class="filter-option"  style="font-family: 'Poetsen One', sans-serif;">
+      <input type="checkbox" id="op4">
+      <label for="op4">MOSTRAR SOLO ESTUDIANTES CON 300 HORAS</label>
+      </div>
+       <div class="filter-option"  style="font-family: 'Poetsen One', sans-serif;">
+      <input type="checkbox" id="op5">
+      <label for="op5">MOSTRAR SOLO ESTUDIANTES CON 400 HORAS</label>
+      </div>
+       <div class="filter-option"  style="font-family: 'Poetsen One', sans-serif;">
+      <input type="checkbox" id="op6">
+      <label for="op6">NOTAS</label>
       </div>
     </div>
   </aside>
 
-  <!-- Contenedor para mostrar tarjetas -->
-  <div id="root"></div>
-  <div id="git"></div>
 
-  <!-- Scripts (github.js primero, luego scripts.js) -->
+<div id="root"></div>
+<div id="git"></div>
+<div id="student"></div> 
+<div id="students"></div> 
+<div id="studentss"></div> 
+<div id="notas"></div> 
+
+
+
   <script src="./js/github.js"></script>
+  <script src="./js/student.js"></script>
+  <script src="./js/students.js"></script>
+  <script src="./js/studentss.js"></script>
+   <script src="./js/notas.js"></script>
   <script src="./js/script.js"></script>
 
 
