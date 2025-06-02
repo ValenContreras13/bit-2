@@ -18,6 +18,16 @@ const checkbox300Hours = document.getElementById('op4');
 const checkbox400Hours = document.getElementById('op5');
 const checkboxNotas = document.getElementById('op6');
 
+// Función para limpiar todas las secciones
+function clearAllSections() {
+  $root.innerHTML = '';
+  $git.innerHTML = '';
+  $student.innerHTML = '';
+  $students.innerHTML = '';
+  $studentss.innerHTML = '';
+  $notas.innerHTML = '';
+}
+
 // Desactiva todos los demás checkboxes excepto el activo
 function deactivateOthers(activeCheckbox) {
   const checkboxes = [
@@ -77,9 +87,7 @@ function fetchAndDisplayStudents() {
         </div>
       `;
 
-      $git.innerHTML = '';
-      $student.innerHTML = '';
-      $notas.innerHTML = '';
+      clearAllSections();
     })
     .catch(err => {
       console.error('Error al cargar JSON:', err);
@@ -99,17 +107,14 @@ checkboxTodos.addEventListener('change', () => {
     deactivateOthers(checkboxTodos);
     fetchAndDisplayStudents();
   } else {
-    $root.innerHTML = '';
+    clearAllSections();
   }
 });
 
 checkboxGitHubBio.addEventListener('change', () => {
   if (checkboxGitHubBio.checked) {
     deactivateOthers(checkboxGitHubBio);
-
-    $root.innerHTML = '';
-    $student.innerHTML = '';
-    $notas.innerHTML = '';
+    clearAllSections();
 
     fetch('file.json')
       .then(res => res.json())
@@ -123,10 +128,7 @@ checkboxGitHubBio.addEventListener('change', () => {
 checkbox100Hours.addEventListener('change', () => {
   if (checkbox100Hours.checked) {
     deactivateOthers(checkbox100Hours);
-
-    $root.innerHTML = '';
-    $git.innerHTML = '';
-    $notas.innerHTML = '';
+    clearAllSections();
 
     fetch('file.json')
       .then(res => res.json())
@@ -147,11 +149,7 @@ checkbox100Hours.addEventListener('change', () => {
 checkbox300Hours.addEventListener('change', () => {
   if (checkbox300Hours.checked) {
     deactivateOthers(checkbox300Hours);
-
-    $root.innerHTML = '';
-    $git.innerHTML = '';
-    $student.innerHTML = '';
-    $notas.innerHTML = '';
+    clearAllSections();
 
     fetch('file.json')
       .then(res => res.json())
@@ -172,11 +170,7 @@ checkbox300Hours.addEventListener('change', () => {
 checkbox400Hours.addEventListener('change', () => {
   if (checkbox400Hours.checked) {
     deactivateOthers(checkbox400Hours);
-
-    $root.innerHTML = '';
-    $git.innerHTML = '';
-    $student.innerHTML = '';
-    $notas.innerHTML = '';
+    clearAllSections();
 
     fetch('file.json')
       .then(res => res.json())
@@ -197,13 +191,7 @@ checkbox400Hours.addEventListener('change', () => {
 checkboxNotas.addEventListener('change', () => {
   if (checkboxNotas.checked) {
     deactivateOthers(checkboxNotas);
-
-    $root.innerHTML = '';
-    $git.innerHTML = '';
-    $student.innerHTML = '';
-    $students.innerHTML = '';
-    $studentss.innerHTML = '';
-    $notas.innerHTML = '';
+    clearAllSections();
 
     fetch('file.json')
       .then(res => res.json())
