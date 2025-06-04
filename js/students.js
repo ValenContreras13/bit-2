@@ -10,6 +10,7 @@ function renderStudentCard(item, fallbackImage) {
   const student = item.student || 'Estudiante sin nombre';
   const username = item.usernameGithub?.trim();
   const hasUsername = username && username !== '';
+
   const imageSrc = hasUsername
     ? `https://github.com/${username}.png`
     : fallbackImage;
@@ -34,3 +35,5 @@ function renderStudentCard(item, fallbackImage) {
     </div>
   `;
 }
+
+export { getStudentsWith300Hours };

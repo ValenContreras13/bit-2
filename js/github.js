@@ -1,12 +1,13 @@
 'use strict';
 
 function fetchGitHubProfiles(data, $root, fallbackImage) {
-  $root.innerHTML = ''; 
+  $root.innerHTML = '';
 
   const cards = data.map(async (item) => {
     const student = item.student || 'Estudiante sin nombre';
     const username = item.usernameGithub?.trim();
     const hasUsername = username && username !== '';
+
     const imageSrc = hasUsername
       ? `https://github.com/${username}.png`
       : fallbackImage;
@@ -53,3 +54,5 @@ function fetchGitHubProfiles(data, $root, fallbackImage) {
     `;
   });
 }
+
+export { fetchGitHubProfiles };
